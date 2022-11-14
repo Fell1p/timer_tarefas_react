@@ -1,9 +1,9 @@
 import React from "react";
-import Botao from "../Botao";
+import Botao from "../Botao";//importação de outro componente
 
 class Formulario extends React.Component {
     render() {
-        return (
+        return ( //O componente Botao foi usado na forma de tag para posteriormente ser reindenizado juntamente com o form
             <form>
                 <div>
                     <label htmlFor="tarefa">
@@ -32,11 +32,11 @@ class Formulario extends React.Component {
                         required
                     />
                 </div>
-                <Botao />
+                <Botao /> 
             </form>
         )
     }
         
 }
 
-export default Formulario
+export default Formulario //exportação do componente formulario
