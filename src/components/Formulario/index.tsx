@@ -1,12 +1,12 @@
 import React from "react";
 import Botao from "../Botao";//importação de outro componente
-import './style.scss';
+import style from './Formulario.module.scss';
 
 class Formulario extends React.Component {
     render() {
         return ( //O componente Botao foi usado na forma de tag para posteriormente ser reindenizado juntamente com o form
-            <form className="novaTarefa">
-                <div className="inputContainer">
+            <form className={style.novaTarefa}>
+                <div className={style.inputContainer}>
                     <label htmlFor="tarefa">
                         Adicione um novo estudo
                     </label>
@@ -19,7 +19,7 @@ class Formulario extends React.Component {
                     />
                 </div>
 
-                <div className="inputContainer">
+                <div className={style.inputContainer}>
                     <label htmlFor="tempo">
                         Tempo
                     </label>
