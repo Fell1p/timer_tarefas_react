@@ -1,14 +1,17 @@
-import React from 'react'; //importação do react em nosso codigo
-import style from  './Botao.module.scss';
+import React, { ReactFragment } from "react"
+import style from './Botao.module.scss'
 
-class Botao extends React.Component<any, any> { //criação de um componente e o nome do componente deve sempre ser escrito com a primeira letra maiuscula
-    render() {      
-        return (
-            <button className={style.botao}>
-                {this.props.children}
-            </button>
-        ) 
-    }
+type Params = {
+    type?: "button" | "submit" | "reset" | undefined;
+    children?: ReactFragment | undefined;
 }
 
-export default Botao; //Exportação do nosso componente
+const Botao: React.FC<Params> = (props:Params) =>{   
+    return(
+        <button type={props.type} className={style.botao}>
+            {props.children}
+        </button>
+    )
+}
+
+export default Botao //Exportação do nosso componente
