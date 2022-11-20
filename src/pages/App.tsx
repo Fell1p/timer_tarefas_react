@@ -11,6 +11,10 @@ function App() { //function que reindenizara nosso componente
 
   function selecionaTarefa(tarefaSelecionada: Itarefa){
     setSelecionado(tarefaSelecionada);
+    setTarefas(tarefasAnteriores => tarefasAnteriores.map(tarefa => ({
+      ...tarefa,
+      selecionado: tarefa.id === tarefaSelecionada.id ? true : false
+    })));
   }
 
   return ( //onde será criada a div responsavél por exibir nosso componente
