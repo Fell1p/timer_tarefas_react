@@ -24,7 +24,7 @@ function App() { //function que reindenizara nosso componente
         tarefas={tarefas}
         selecionaTarefa={selecionaTarefa}
       />
-      <Cronometro />
+      <Cronometro selecionado={selecionado} />
     </div>
   );
 }
