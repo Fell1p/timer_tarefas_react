@@ -17,6 +17,22 @@ function App() { //function que reindenizara nosso componente
     })));
   }
 
+  function finalizarTarefa(){
+    if(selecionado){
+      setSelecionado(undefined);
+      setTarefas(tarefasAnteriores => tarefasAnteriores.map(tarefa => {
+        if(tarefa.id === selecionado.id) {
+          return {
+            ...tarefa,
+            selecionado: false,
+            completado: true
+          }
+        }
+        return tarefa;
+      }))
+    }
+  }
+
   return ( //onde será criada a div responsavél por exibir nosso componente
     <div className={style.AppStyle}>
       <Formulario setTarefas={setTarefas}/>
@@ -24,7 +40,9 @@ function App() { //function que reindenizara nosso componente
         tarefas={tarefas}
         selecionaTarefa={selecionaTarefa}
       />
-      <Cronometro selecionado={selecionado} />
+      <Cronometro 
+        selecionado={selecionado}
+        finalizarTarefa={finalizarTarefa} />
     </div>
   );
 }
