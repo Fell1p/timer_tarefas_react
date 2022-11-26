@@ -6,10 +6,10 @@ Este projeto se consiste no desenvolvimento de uma página web que gerencie o te
 O desenvolvimento foi realizado durante o curso de React da plataforma Alura. 
 
 ## Objetivo 
-Desenvolver conhecimento de React e TypeScript e através disto realizar: 
+Desenvolver conhecimento de React e TypeScript e assim: 
 
-- Utilizar o React para programar o sistema;
-- Aplicar o conceito de componentes e comunicação entre componentes e utilizar;
+- Utilizar o React e o TypeScript para programar o sistema;
+- Aplicar o conceito de componentes e comunicação entre componentes;
 - Permitir que o usuário através de um formulário cadastre uma tarefa e o tempo que deseja atribuir a mesma e através de um cronômetro ele seja capas de visualizar o tempo decorrido da respectiva tarefa;
 
 ## Tecnologias utilizadas
